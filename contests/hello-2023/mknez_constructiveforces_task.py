@@ -9,6 +9,9 @@ def find_array(length: int):
     if length % 2 == 0:
         proof = [1+(i%2)*(-2) for i in range(1, length+1)]
         return proof, "YES"
+    elif length > 3:
+        proof = [-(int(length/2))+(i%2)*(int(length/2)*2-1) for i in range(1, length+1)]
+        return proof, "YES"
     
     return None, "NO"
 
